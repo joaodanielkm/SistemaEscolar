@@ -62,6 +62,8 @@
             this.cbxNaturalidade = new System.Windows.Forms.ComboBox();
             this.cbxNacionalidade = new System.Windows.Forms.ComboBox();
             this.txbDataNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.gbxContato = new System.Windows.Forms.GroupBox();
+            this.gbxContato.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -230,7 +232,7 @@
             // 
             // txbObs
             // 
-            this.txbObs.Location = new System.Drawing.Point(26, 364);
+            this.txbObs.Location = new System.Drawing.Point(40, 359);
             this.txbObs.Multiline = true;
             this.txbObs.Name = "txbObs";
             this.txbObs.Size = new System.Drawing.Size(552, 62);
@@ -239,11 +241,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(23, 279);
+            this.label12.Location = new System.Drawing.Point(37, 274);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 13);
+            this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Contato";
+            this.label12.Text = "Telefone";
             // 
             // label13
             // 
@@ -256,7 +258,7 @@
             // 
             // txbContatoNome
             // 
-            this.txbContatoNome.Location = new System.Drawing.Point(269, 306);
+            this.txbContatoNome.Location = new System.Drawing.Point(253, 61);
             this.txbContatoNome.Name = "txbContatoNome";
             this.txbContatoNome.Size = new System.Drawing.Size(309, 20);
             this.txbContatoNome.TabIndex = 30;
@@ -264,7 +266,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(266, 279);
+            this.label14.Location = new System.Drawing.Point(250, 34);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 29;
@@ -273,7 +275,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 338);
+            this.label15.Location = new System.Drawing.Point(37, 333);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 13);
             this.label15.TabIndex = 32;
@@ -304,7 +306,7 @@
             // 
             // txbContatoTelefone
             // 
-            this.txbContatoTelefone.Location = new System.Drawing.Point(26, 306);
+            this.txbContatoTelefone.Location = new System.Drawing.Point(40, 301);
             this.txbContatoTelefone.Mask = "(99) 0 000-0000";
             this.txbContatoTelefone.Name = "txbContatoTelefone";
             this.txbContatoTelefone.Size = new System.Drawing.Size(210, 20);
@@ -352,6 +354,17 @@
             this.txbDataNascimento.TabIndex = 40;
             this.txbDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
+            // gbxContato
+            // 
+            this.gbxContato.Controls.Add(this.txbContatoNome);
+            this.gbxContato.Controls.Add(this.label14);
+            this.gbxContato.Location = new System.Drawing.Point(26, 240);
+            this.gbxContato.Name = "gbxContato";
+            this.gbxContato.Size = new System.Drawing.Size(581, 196);
+            this.gbxContato.TabIndex = 41;
+            this.gbxContato.TabStop = false;
+            this.gbxContato.Text = "Contato";
+            // 
             // formCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,8 +379,6 @@
             this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.txbCEP);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txbContatoNome);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txbObs);
             this.Controls.Add(this.label12);
@@ -390,11 +401,14 @@
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.gbxContato);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "formCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.gbxContato.ResumeLayout(false);
+            this.gbxContato.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +449,6 @@
         private System.Windows.Forms.ComboBox cbxNaturalidade;
         private System.Windows.Forms.ComboBox cbxNacionalidade;
         private System.Windows.Forms.MaskedTextBox txbDataNascimento;
+        private System.Windows.Forms.GroupBox gbxContato;
     }
 }

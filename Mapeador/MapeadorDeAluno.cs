@@ -166,39 +166,14 @@ INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE ";
             }
 
         }
-        public List<Aluno> ObtemAlunos(Aluno aluno)
+        public DataTable ObtemAlunos()
         {
-            List<Aluno> alunoss = new List<Aluno>();
 
             string sql = @"SELECT * FROM ALUNOS A
-INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE " + aluno.Nome;
+INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE ";
 
-            DataTable dt = Banco.consulta(sql);
-
-            foreach (DataRow item in dt.Rows)
-            {
-                Aluno alunos = new Aluno()
-                {
-                    //Matricula = item.Field<string>("A.ALUMATRICULA"),
-                    Nome = item.Field<string>("ALUNOME"),
-                    CPF = item.Field<string>("ALUCPF"),
-                    Sexo = item.Field<string>("ALUSEXO"),
-                    Nascimento = item.Field<string>("ALUDATANASC"),
-                    Nacionalidade = item.Field<string>("DESCRICAOCIDADE"),
-                    Naturalidade = item.Field<string>("DESCRICAOCIDADE"),
-                    Endereco = item.Field<string>("ALUENDERECO"),
-                    CEP = item.Field<string>("ALUCEP"),
-                    Email = item.Field<string>("ALUEMAIL"),
-                    Telefone = item.Field<string>("ALUTELEFONE"),
-                    Contato = item.Field<string>("ALUFONECONTATO"),
-                    ContatoNome = item.Field<string>("ALUCONTATO"),
-                    Obs = item.Field<string>("ALUOBS"),
-                };
-
-                alunoss.Add(alunos);
-            }
-
-            return alunoss;
+            dt = Banco.consulta(sql);
+            return dt;
         }
 
     }

@@ -21,6 +21,7 @@ namespace Sistema_Escolar
         
         ProcessoAluno processoAluno = new ProcessoAluno();
         DataTable dt = new DataTable(); 
+        Aluno aluno = new Aluno();
 
         public formEditar()
         {
@@ -73,11 +74,11 @@ namespace Sistema_Escolar
         private void formEditar_Load(object sender, EventArgs e)
         {
             MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
-            var sql = $"SELECT * FROM ALUNOS A INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE WHERE ALUNOME LIKE '{aluno.Nome}'";
+            //var sql = $"SELECT * FROM ALUNOS A INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE WHERE ALUNOME LIKE '{aluno.Nome}'";
             dt = mapeadorDeAluno.ObtemAlunos();
 
-            txbMatricula.Text = dt.Rows[0].ItemArray[0].ToString();
-            txbNome.Text = dt.Rows[0].ItemArray[1].ToString();
+            txbMatricula.Text = aluno.Matricula;
+            txbNome.Text = aluno.Nome;
 
             //CPF = txbCPF.Text,
             //CEP = txbCEP.Text,
