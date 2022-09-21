@@ -166,16 +166,12 @@ INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE ";
             }
 
         }
-        public DataTable ObtemAlunos()
-        {
-
-            string sql = @"SELECT * FROM ALUNOS A
-INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE ";
-
-            dt = Banco.consulta(sql);
-            return dt;
-        }
-
+        //public DataTable ObtemAlunos() //=>
+                //   Banco.consulta ("SELECT * FROM ALUNOS A INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE WHERE A.ALUNOME LIKE 'JOAO DANIEL'");
+        
+        public DataTable ObtemCidade() =>
+            dt = Banco.consulta("SELECT DESCRICAOCIDADE FROM CIDADES");
+        
     }
 }
 

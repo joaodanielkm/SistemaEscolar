@@ -59,7 +59,7 @@ namespace Sistema_Escolar
                 Telefone = txbTelefone.Text,
                 Email = txbEmail.Text,
                 Sexo = cbxSexo.Text,
-                Nacionalidade = cbxNacionalidade.Text,
+                Nacionalidade = cbxCidade.Text,
                 Naturalidade = cbxNaturalidade.Text,
                 Nascimento = txbDataNascimento.Text,
                 Contato = txbContatoTelefone.Text,
@@ -71,27 +71,26 @@ namespace Sistema_Escolar
 
         }
 
-        private void formEditar_Load(object sender, EventArgs e)
+        public void formEditar_Load(object sender, EventArgs e)
         {
-            MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
-            //var sql = $"SELECT * FROM ALUNOS A INNER JOIN CIDADES C ON A.ALUNACIONAL = C.CODCIDADE WHERE ALUNOME LIKE '{aluno.Nome}'";
-            dt = mapeadorDeAluno.ObtemAlunos();
+            
+            //MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
+            //dt = mapeadorDeAluno.ObtemAlunos();
 
-            txbMatricula.Text = aluno.Matricula;
-            txbNome.Text = aluno.Nome;
-
-            //CPF = txbCPF.Text,
-            //CEP = txbCEP.Text,
-            //Endereco = txbEndereco.Text,
-            //Telefone = txbTelefone.Text,
-            //Email = txbEmail.Text,
-            //Sexo = cbxSexo.Text,
-            //Nacionalidade = cbxNacionalidade.Text,
-            //Naturalidade = cbxNaturalidade.Text,
-            //Nascimento = txbDataNascimento.Text,
-            //Contato = txbContatoTelefone.Text,
-            //ContatoNome = txbContatoNome.Text,
-            //Obs = txbObs.Text,
+            //txbMatricula.Text = dt.Rows[0].ItemArray[0].ToString();
+            //txbNome.Text = dt.Rows[0].ItemArray[1].ToString();
+            //txbCPF.Text = dt.Rows[0].ItemArray[2].ToString();
+            //txbEndereco.Text = dt.Rows[0].ItemArray[3].ToString();
+            //txbEmail.Text = dt.Rows[0].ItemArray[4].ToString();
+            //cbxSexo.Text = dt.Rows[0].ItemArray[5].ToString();
+            //txbNacionalidade.Text = dt.Rows[0].ItemArray[6].ToString();
+            //txbNaturalidade.Text = dt.Rows[0].ItemArray[7].ToString();
+            //txbDataNascimento.Text = dt.Rows[0].ItemArray[8].ToString();
+            //txbTelefone.Text = dt.Rows[0].ItemArray[9].ToString();
+            //txbCEP.Text = dt.Rows[0].ItemArray[10].ToString();
+            //txbContatoTelefone.Text = dt.Rows[0].ItemArray[11].ToString();
+            //txbContatoNome.Text = dt.Rows[0].ItemArray[12].ToString();
+            //txbObs.Text = dt.Rows[0].ItemArray[13].ToString();
         }
     }
 }

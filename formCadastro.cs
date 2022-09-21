@@ -1,4 +1,5 @@
-﻿using Sistema_Escolar.Negocio;
+﻿using Sistema_Escolar.Mapeador;
+using Sistema_Escolar.Negocio;
 using Sistema_Escolar.Processo;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,8 @@ namespace Sistema_Escolar
 
         //Aluno aluno = new Aluno();
         ProcessoAluno processoAluno = new ProcessoAluno();
-         
+        MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
+
         public formCadastro()
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace Sistema_Escolar
                 Telefone = txbTelefone.Text,
                 Email = txbEmail.Text,
                 Sexo = cbxSexo.Text,
-                Nacionalidade = cbxNacionalidade.Text,
+                Nacionalidade = cbxCidade.Text,
                 Naturalidade = cbxNaturalidade.Text,
                 Nascimento = txbDataNascimento.Text,
                 Contato = txbContatoTelefone.Text,
@@ -65,6 +67,17 @@ namespace Sistema_Escolar
             };
             processoAluno.CadastraAluno(aluno);
 
+        }
+
+        public void formCadastro_Load(object sender, EventArgs e)
+        {
+            cbxCidade.Items.Clear();
+            cbxCidade.DataSource = mapeadorDeAluno.ObtemCidade();
+            cbxCidade.DisplayMember = "DESCRICAOCIDADE";
+
+            cbxNaturalidade.Items.Clear();
+            cbxNaturalidade.DataSource = mapeadorDeAluno.ObtemCidade();
+            cbxNaturalidade.DisplayMember = "DESCRICAOCIDADE";
         }
     }
 }

@@ -131,9 +131,8 @@ namespace Sistema_Escolar
                 //Obs = Convert.ToString(dtgListaDeAlunos["Obs", sel].Value),
 
             };
-            
-            
-            
+
+
             editar.Show();
             
         }
