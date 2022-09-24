@@ -11,6 +11,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Sistema_Escolar
@@ -85,6 +86,8 @@ namespace Sistema_Escolar
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            ProcessoAluno processoAluno = new ProcessoAluno();
+            
             var aluno = new Aluno()
             {
                 Matricula = txbMatricula.Text,
@@ -103,7 +106,12 @@ namespace Sistema_Escolar
                 ContatoNome = txbContatoNome.Text.ToUpper(),
                 Obs = txbObs.Text.ToUpper(),
             };
-            processoAluno.AlteraAluno(aluno);
+            if (processoAluno.EhValidoCampos(aluno))
+            {
+                processoAluno.AlteraAluno(aluno);
+                
+            }
+            
         }
 
         public void formEditar_Load(object sender, EventArgs e)

@@ -49,5 +49,10 @@ namespace Sistema_Escolar.Processo
             var alterado = MessageBox.Show("Alterado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return alterado;
         }
+        public DialogResult FavorPreencherObrigatorios()
+        {
+            var obrigatorios = MessageBox.Show("Favor Preencher os campos obrigatorios!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return obrigatorios;
+        }
     }
 }

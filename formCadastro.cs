@@ -75,7 +75,12 @@ namespace Sistema_Escolar
                 Obs = txbObs.Text.ToUpper(),
 
             };
-            processoAluno.CadastraAluno(aluno);
+
+            if (processoAluno.EhValidoCampos(aluno))
+            {
+                processoAluno.CadastraAluno(aluno);
+            }
+            
 
         }
 
