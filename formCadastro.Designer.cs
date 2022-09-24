@@ -261,7 +261,7 @@
             this.txbContatoNome.Location = new System.Drawing.Point(14, 48);
             this.txbContatoNome.Name = "txbContatoNome";
             this.txbContatoNome.Size = new System.Drawing.Size(309, 20);
-            this.txbContatoNome.TabIndex = 12;
+            this.txbContatoNome.TabIndex = 13;
             // 
             // label14
             // 
@@ -365,7 +365,7 @@
             this.gbxContato.Location = new System.Drawing.Point(26, 253);
             this.gbxContato.Name = "gbxContato";
             this.gbxContato.Size = new System.Drawing.Size(581, 183);
-            this.gbxContato.TabIndex = 41;
+            this.gbxContato.TabIndex = 12;
             this.gbxContato.TabStop = false;
             this.gbxContato.Text = "Contato";
             // 

@@ -74,7 +74,7 @@ namespace Sistema_Escolar
             this.btnAltera.Location = new System.Drawing.Point(624, 265);
             this.btnAltera.Name = "btnAltera";
             this.btnAltera.Size = new System.Drawing.Size(147, 41);
-            this.btnAltera.TabIndex = 14;
+            this.btnAltera.TabIndex = 15;
             this.btnAltera.Text = "Alterar";
             this.btnAltera.UseVisualStyleBackColor = false;
             this.btnAltera.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -85,7 +85,7 @@ namespace Sistema_Escolar
             this.btnLimpar.Location = new System.Drawing.Point(624, 324);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(147, 41);
-            this.btnLimpar.TabIndex = 15;
+            this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.button2_Click);
@@ -96,7 +96,7 @@ namespace Sistema_Escolar
             this.btnFechar.Location = new System.Drawing.Point(624, 385);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(147, 41);
-            this.btnFechar.TabIndex = 16;
+            this.btnFechar.TabIndex = 17;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -238,7 +238,7 @@ namespace Sistema_Escolar
             this.txbObs.Multiline = true;
             this.txbObs.Name = "txbObs";
             this.txbObs.Size = new System.Drawing.Size(552, 62);
-            this.txbObs.TabIndex = 13;
+            this.txbObs.TabIndex = 14;
             // 
             // label12
             // 
@@ -263,7 +263,7 @@ namespace Sistema_Escolar
             this.txbContatoNome.Location = new System.Drawing.Point(7, 48);
             this.txbContatoNome.Name = "txbContatoNome";
             this.txbContatoNome.Size = new System.Drawing.Size(309, 20);
-            this.txbContatoNome.TabIndex = 11;
+            this.txbContatoNome.TabIndex = 12;
             // 
             // label14
             // 
@@ -312,7 +312,7 @@ namespace Sistema_Escolar
             this.txbContatoTelefone.Mask = "(99) 0 0000-0000";
             this.txbContatoTelefone.Name = "txbContatoTelefone";
             this.txbContatoTelefone.Size = new System.Drawing.Size(210, 20);
-            this.txbContatoTelefone.TabIndex = 12;
+            this.txbContatoTelefone.TabIndex = 13;
             // 
             // txbCPF
             // 
@@ -368,7 +368,7 @@ namespace Sistema_Escolar
             this.groupBox1.Location = new System.Drawing.Point(27, 253);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(580, 185);
-            this.groupBox1.TabIndex = 41;
+            this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contato";
             // 
