@@ -181,7 +181,7 @@ INNER JOIN CIDADES CC ON  A.ALUENDCIDADE = CC.CODCIDADE  ";
         {
             try
             {
-                var sql = $"DELETE FROM ALUNOS WHERE ALUNOME = '{matricula}'";
+                var sql = $"DELETE FROM ALUNOS WHERE ALUMATRICULA = '{matricula}'";
                 Banco.consulta(sql);
                 msg.Deletado();
             }
