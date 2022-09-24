@@ -1,4 +1,6 @@
-﻿namespace Sistema_Escolar
+﻿using Sistema_Escolar.Negocio;
+
+namespace Sistema_Escolar
 {
     partial class formEditar
     {
@@ -60,7 +62,7 @@
             this.txbCPF = new System.Windows.Forms.MaskedTextBox();
             this.txbMatricula = new System.Windows.Forms.MaskedTextBox();
             this.cbxNaturalidade = new System.Windows.Forms.ComboBox();
-            this.cbxCidade = new System.Windows.Forms.ComboBox();
+            this.cbxCidadeEndereco = new System.Windows.Forms.ComboBox();
             this.txbDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -72,7 +74,7 @@
             this.btnAltera.Location = new System.Drawing.Point(624, 265);
             this.btnAltera.Name = "btnAltera";
             this.btnAltera.Size = new System.Drawing.Size(147, 41);
-            this.btnAltera.TabIndex = 0;
+            this.btnAltera.TabIndex = 14;
             this.btnAltera.Text = "Alterar";
             this.btnAltera.UseVisualStyleBackColor = false;
             this.btnAltera.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -83,7 +85,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(624, 324);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(147, 41);
-            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.TabIndex = 15;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.button2_Click);
@@ -94,7 +96,7 @@
             this.btnFechar.Location = new System.Drawing.Point(624, 385);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(147, 41);
-            this.btnFechar.TabIndex = 2;
+            this.btnFechar.TabIndex = 16;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -104,7 +106,7 @@
             this.txbNome.Location = new System.Drawing.Point(184, 37);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(436, 20);
-            this.txbNome.TabIndex = 4;
+            this.txbNome.TabIndex = 0;
             // 
             // cbxSexo
             // 
@@ -115,7 +117,7 @@
             this.cbxSexo.Location = new System.Drawing.Point(184, 92);
             this.cbxSexo.Name = "cbxSexo";
             this.cbxSexo.Size = new System.Drawing.Size(132, 21);
-            this.cbxSexo.TabIndex = 10;
+            this.cbxSexo.TabIndex = 3;
             // 
             // label1
             // 
@@ -212,7 +214,7 @@
             this.txbEndereco.Location = new System.Drawing.Point(26, 214);
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(518, 20);
-            this.txbEndereco.TabIndex = 21;
+            this.txbEndereco.TabIndex = 9;
             // 
             // label11
             // 
@@ -228,7 +230,7 @@
             this.txbNacionalidade.Location = new System.Drawing.Point(26, 150);
             this.txbNacionalidade.Name = "txbNacionalidade";
             this.txbNacionalidade.Size = new System.Drawing.Size(236, 20);
-            this.txbNacionalidade.TabIndex = 23;
+            this.txbNacionalidade.TabIndex = 6;
             // 
             // txbObs
             // 
@@ -236,12 +238,12 @@
             this.txbObs.Multiline = true;
             this.txbObs.Name = "txbObs";
             this.txbObs.Size = new System.Drawing.Size(552, 62);
-            this.txbObs.TabIndex = 26;
+            this.txbObs.TabIndex = 13;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(31, 277);
+            this.label12.Location = new System.Drawing.Point(346, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 25;
@@ -258,15 +260,15 @@
             // 
             // txbContatoNome
             // 
-            this.txbContatoNome.Location = new System.Drawing.Point(250, 51);
+            this.txbContatoNome.Location = new System.Drawing.Point(7, 48);
             this.txbContatoNome.Name = "txbContatoNome";
             this.txbContatoNome.Size = new System.Drawing.Size(309, 20);
-            this.txbContatoNome.TabIndex = 30;
+            this.txbContatoNome.TabIndex = 11;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(247, 24);
+            this.label14.Location = new System.Drawing.Point(4, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 29;
@@ -287,30 +289,30 @@
             this.txbCEP.Mask = "00000-999";
             this.txbCEP.Name = "txbCEP";
             this.txbCEP.Size = new System.Drawing.Size(153, 20);
-            this.txbCEP.TabIndex = 33;
+            this.txbCEP.TabIndex = 7;
             // 
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(344, 91);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(200, 20);
-            this.txbEmail.TabIndex = 6;
+            this.txbEmail.TabIndex = 4;
             // 
             // txbTelefone
             // 
             this.txbTelefone.Location = new System.Drawing.Point(561, 214);
-            this.txbTelefone.Mask = "(99) 0 000-0000";
+            this.txbTelefone.Mask = "(99) 0 0000-0000";
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(210, 20);
-            this.txbTelefone.TabIndex = 34;
+            this.txbTelefone.TabIndex = 10;
             // 
             // txbContatoTelefone
             // 
-            this.txbContatoTelefone.Location = new System.Drawing.Point(34, 304);
-            this.txbContatoTelefone.Mask = "(99) 0 000-0000";
+            this.txbContatoTelefone.Location = new System.Drawing.Point(349, 48);
+            this.txbContatoTelefone.Mask = "(99) 0 0000-0000";
             this.txbContatoTelefone.Name = "txbContatoTelefone";
             this.txbContatoTelefone.Size = new System.Drawing.Size(210, 20);
-            this.txbContatoTelefone.TabIndex = 35;
+            this.txbContatoTelefone.TabIndex = 12;
             // 
             // txbCPF
             // 
@@ -318,7 +320,7 @@
             this.txbCPF.Mask = "000.000.000-99";
             this.txbCPF.Name = "txbCPF";
             this.txbCPF.Size = new System.Drawing.Size(132, 20);
-            this.txbCPF.TabIndex = 36;
+            this.txbCPF.TabIndex = 2;
             // 
             // txbMatricula
             // 
@@ -327,7 +329,8 @@
             this.txbMatricula.Name = "txbMatricula";
             this.txbMatricula.ReadOnly = true;
             this.txbMatricula.Size = new System.Drawing.Size(132, 20);
-            this.txbMatricula.TabIndex = 37;
+            this.txbMatricula.TabIndex = 99;
+            this.txbMatricula.TabStop = false;
             this.txbMatricula.ValidatingType = typeof(int);
             // 
             // cbxNaturalidade
@@ -336,15 +339,15 @@
             this.cbxNaturalidade.Location = new System.Drawing.Point(575, 92);
             this.cbxNaturalidade.Name = "cbxNaturalidade";
             this.cbxNaturalidade.Size = new System.Drawing.Size(196, 21);
-            this.cbxNaturalidade.TabIndex = 38;
+            this.cbxNaturalidade.TabIndex = 5;
             // 
-            // cbxCidade
+            // cbxCidadeEndereco
             // 
-            this.cbxCidade.FormattingEnabled = true;
-            this.cbxCidade.Location = new System.Drawing.Point(463, 150);
-            this.cbxCidade.Name = "cbxCidade";
-            this.cbxCidade.Size = new System.Drawing.Size(308, 21);
-            this.cbxCidade.TabIndex = 39;
+            this.cbxCidadeEndereco.FormattingEnabled = true;
+            this.cbxCidadeEndereco.Location = new System.Drawing.Point(463, 150);
+            this.cbxCidadeEndereco.Name = "cbxCidadeEndereco";
+            this.cbxCidadeEndereco.Size = new System.Drawing.Size(308, 21);
+            this.cbxCidadeEndereco.TabIndex = 8;
             // 
             // txbDataNascimento
             // 
@@ -352,7 +355,7 @@
             this.txbDataNascimento.Mask = "00/00/0000";
             this.txbDataNascimento.Name = "txbDataNascimento";
             this.txbDataNascimento.Size = new System.Drawing.Size(132, 20);
-            this.txbDataNascimento.TabIndex = 40;
+            this.txbDataNascimento.TabIndex = 1;
             this.txbDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // groupBox1
@@ -360,6 +363,8 @@
             this.groupBox1.Controls.Add(this.txbContatoNome);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txbObs);
+            this.groupBox1.Controls.Add(this.txbContatoTelefone);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Location = new System.Drawing.Point(27, 253);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(580, 185);
@@ -373,16 +378,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txbDataNascimento);
-            this.Controls.Add(this.cbxCidade);
+            this.Controls.Add(this.cbxCidadeEndereco);
             this.Controls.Add(this.cbxNaturalidade);
             this.Controls.Add(this.txbMatricula);
             this.Controls.Add(this.txbCPF);
-            this.Controls.Add(this.txbContatoTelefone);
             this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.txbCEP);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txbNacionalidade);
             this.Controls.Add(this.label10);
@@ -407,7 +410,7 @@
             this.MaximizeBox = false;
             this.Name = "formEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro";
+            this.Text = "Editar";
             this.Load += new System.EventHandler(this.formEditar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -421,7 +424,6 @@
         private System.Windows.Forms.Button btnAltera;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -449,8 +451,9 @@
         private System.Windows.Forms.MaskedTextBox txbCPF;
         private System.Windows.Forms.MaskedTextBox txbMatricula;
         private System.Windows.Forms.ComboBox cbxNaturalidade;
-        private System.Windows.Forms.ComboBox cbxCidade;
+        private System.Windows.Forms.ComboBox cbxCidadeEndereco;
         private System.Windows.Forms.MaskedTextBox txbDataNascimento;
         private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox txbNome;
     }
 }

@@ -15,18 +15,42 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Sistema_Escolar
 {
+
     public partial class formEditar : Form
     {
+        public string NomeEditar { get; set; }
 
-        
+        MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
         ProcessoAluno processoAluno = new ProcessoAluno();
-        DataTable dt = new DataTable(); 
-        Aluno aluno = new Aluno();
+        DataTable dt = new DataTable();
 
-        public formEditar()
+        public formEditar(Aluno aluno)
         {
             InitializeComponent();
 
+            txbMatricula.Text = aluno.Matricula;
+            txbNome.Text = aluno.Nome.ToUpper();
+            txbCPF.Text = aluno.CPF;
+            cbxSexo.Text = aluno.Sexo;
+            txbDataNascimento.Text = aluno.Nascimento;
+            txbNacionalidade.Text = aluno.Nacionalidade.ToUpper();
+            cbxNaturalidade.Text = aluno.Naturalidade.ToUpper();
+            txbEndereco.Text = aluno.Endereco.ToUpper();
+            cbxCidadeEndereco.Text = aluno.CidadeEndereco.ToUpper();
+            txbCEP.Text = aluno.CEP;
+            txbEmail.Text = aluno.Email.ToUpper();
+            txbTelefone.Text = aluno.Telefone;
+            txbContatoTelefone.Text = aluno.Contato;
+            txbContatoNome.Text = aluno.ContatoNome.ToUpper();
+            txbObs.Text = aluno.Obs.ToUpper();
+
+            cbxCidadeEndereco.DataSource = mapeadorDeAluno.ObtemCidade();
+            cbxCidadeEndereco.DisplayMember = "DESCRICAOCIDADE";
+            cbxCidadeEndereco.Text = aluno.CidadeEndereco;
+
+            cbxNaturalidade.DataSource = mapeadorDeAluno.ObtemCidade();
+            cbxNaturalidade.DisplayMember = "DESCRICAOCIDADE";
+            cbxNaturalidade.Text = aluno.Naturalidade;
 
         }
 
@@ -37,7 +61,19 @@ namespace Sistema_Escolar
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            txbCEP.Clear();
+            txbContatoNome.Clear();
+            txbContatoTelefone.Clear();
+            txbCPF.Clear();
+            txbDataNascimento.Clear();
+            txbEmail.Clear();
+            txbEndereco.Clear();
+            txbNacionalidade.Clear();
+            txbNome.Clear();
+            txbObs.Clear();
+            txbTelefone.Clear();
+            txbContatoNome.Clear();
+            txbContatoTelefone.Clear();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -52,45 +88,27 @@ namespace Sistema_Escolar
             var aluno = new Aluno()
             {
                 Matricula = txbMatricula.Text,
-                Nome = txbNome.Text,
+                Nome = txbNome.Text.ToUpper(),
                 CPF = txbCPF.Text,
-                CEP = txbCEP.Text,
-                Endereco = txbEndereco.Text,
-                Telefone = txbTelefone.Text,
-                Email = txbEmail.Text,
                 Sexo = cbxSexo.Text,
-                Nacionalidade = cbxCidade.Text,
-                Naturalidade = cbxNaturalidade.Text,
                 Nascimento = txbDataNascimento.Text,
+                Nacionalidade = cbxCidadeEndereco.Text.ToUpper(),
+                Naturalidade = cbxNaturalidade.Text.ToUpper(),
+                Endereco = txbEndereco.Text.ToUpper(),
+                CidadeEndereco = cbxCidadeEndereco.Text.ToUpper(),
+                CEP = txbCEP.Text,
+                Email = txbEmail.Text.ToUpper(),
+                Telefone = txbTelefone.Text,
                 Contato = txbContatoTelefone.Text,
-                ContatoNome = txbContatoNome.Text,
-                Obs = txbObs.Text,
-
+                ContatoNome = txbContatoNome.Text.ToUpper(),
+                Obs = txbObs.Text.ToUpper(),
             };
             processoAluno.AlteraAluno(aluno);
-
         }
 
         public void formEditar_Load(object sender, EventArgs e)
         {
-            
-            //MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
-            //dt = mapeadorDeAluno.ObtemAlunos();
-
-            //txbMatricula.Text = dt.Rows[0].ItemArray[0].ToString();
-            //txbNome.Text = dt.Rows[0].ItemArray[1].ToString();
-            //txbCPF.Text = dt.Rows[0].ItemArray[2].ToString();
-            //txbEndereco.Text = dt.Rows[0].ItemArray[3].ToString();
-            //txbEmail.Text = dt.Rows[0].ItemArray[4].ToString();
-            //cbxSexo.Text = dt.Rows[0].ItemArray[5].ToString();
-            //txbNacionalidade.Text = dt.Rows[0].ItemArray[6].ToString();
-            //txbNaturalidade.Text = dt.Rows[0].ItemArray[7].ToString();
-            //txbDataNascimento.Text = dt.Rows[0].ItemArray[8].ToString();
-            //txbTelefone.Text = dt.Rows[0].ItemArray[9].ToString();
-            //txbCEP.Text = dt.Rows[0].ItemArray[10].ToString();
-            //txbContatoTelefone.Text = dt.Rows[0].ItemArray[11].ToString();
-            //txbContatoNome.Text = dt.Rows[0].ItemArray[12].ToString();
-            //txbObs.Text = dt.Rows[0].ItemArray[13].ToString();
+           txbNome.Focus();
         }
     }
 }

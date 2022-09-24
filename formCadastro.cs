@@ -16,16 +16,12 @@ namespace Sistema_Escolar
     public partial class formCadastro : Form
     {
 
-        //Aluno aluno = new Aluno();
         ProcessoAluno processoAluno = new ProcessoAluno();
         MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
 
         public formCadastro()
         {
             InitializeComponent();
-
-
-
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -35,7 +31,20 @@ namespace Sistema_Escolar
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            txbCEP.Clear();
+            txbContatoNome.Clear();
+            txbContatoTelefone.Clear();
+            txbCPF.Clear();
+            txbDataNascimento.Clear();
+            txbEmail.Clear();
+            txbEndereco.Clear();
+            txbNacionalidade.Clear();
+            txbNome.Clear();
+            txbObs.Clear();
+            txbTelefone.Clear();
+            txbContatoNome.Clear();
+            txbContatoTelefone.Clear();
+            txbMatricula.Clear();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -50,19 +59,20 @@ namespace Sistema_Escolar
             var aluno = new Aluno()
             {
                 Matricula = txbMatricula.Text,
-                Nome = txbNome.Text,
+                Nome = txbNome.Text.ToUpper(),
                 CPF = txbCPF.Text,
-                CEP = txbCEP.Text,
-                Endereco = txbEndereco.Text,
-                Telefone = txbTelefone.Text,
-                Email = txbEmail.Text,
                 Sexo = cbxSexo.Text,
-                Nacionalidade = cbxCidade.Text,
-                Naturalidade = cbxNaturalidade.Text,
                 Nascimento = txbDataNascimento.Text,
+                Nacionalidade = cbxCidadeEndereco.Text.ToUpper(),
+                Naturalidade = cbxNaturalidade.Text.ToUpper(),
+                Endereco = txbEndereco.Text.ToUpper(),
+                CidadeEndereco = cbxCidadeEndereco.Text.ToUpper(),
+                CEP = txbCEP.Text,
+                Email = txbEmail.Text.ToUpper(),
+                Telefone = txbTelefone.Text,
                 Contato = txbContatoTelefone.Text,
-                ContatoNome = txbContatoNome.Text,
-                Obs = txbObs.Text,
+                ContatoNome = txbContatoNome.Text.ToUpper(),
+                Obs = txbObs.Text.ToUpper(),
 
             };
             processoAluno.CadastraAluno(aluno);
@@ -71,13 +81,20 @@ namespace Sistema_Escolar
 
         public void formCadastro_Load(object sender, EventArgs e)
         {
-            cbxCidade.Items.Clear();
-            cbxCidade.DataSource = mapeadorDeAluno.ObtemCidade();
-            cbxCidade.DisplayMember = "DESCRICAOCIDADE";
+            var dt = mapeadorDeAluno.ObtemUltimaMatricula();
+            txbMatricula.Text = Convert.ToDouble(dt.Rows[0].ItemArray[0]).ToString();
+            txbNacionalidade.Text = "BRASILEIRA";
 
+            cbxCidadeEndereco.Items.Clear();
+            cbxCidadeEndereco.DataSource = mapeadorDeAluno.ObtemCidade();
+            cbxCidadeEndereco.DisplayMember = "DESCRICAOCIDADE";
+            
             cbxNaturalidade.Items.Clear();
             cbxNaturalidade.DataSource = mapeadorDeAluno.ObtemCidade();
             cbxNaturalidade.DisplayMember = "DESCRICAOCIDADE";
+            
+            Aluno aluno = new Aluno();
+            txbNome.Text = aluno.Nome;
         }
     }
 }

@@ -39,5 +39,15 @@ namespace Sistema_Escolar.Processo
             var deletado = MessageBox.Show("Deletado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return deletado;
         }
+        public DialogResult Cadastrado()
+        {
+            var cadastrado = MessageBox.Show("Cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return cadastrado;
+        }
+        public DialogResult Alterado()
+        {
+            var alterado = MessageBox.Show("Alterado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return alterado;
+        }
     }
 }

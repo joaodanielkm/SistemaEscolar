@@ -60,7 +60,7 @@
             this.txbCPF = new System.Windows.Forms.MaskedTextBox();
             this.txbMatricula = new System.Windows.Forms.MaskedTextBox();
             this.cbxNaturalidade = new System.Windows.Forms.ComboBox();
-            this.cbxCidade = new System.Windows.Forms.ComboBox();
+            this.cbxCidadeEndereco = new System.Windows.Forms.ComboBox();
             this.txbDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.gbxContato = new System.Windows.Forms.GroupBox();
             this.gbxContato.SuspendLayout();
@@ -72,7 +72,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(624, 265);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(147, 41);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.TabIndex = 15;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -83,7 +83,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(624, 324);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(147, 41);
-            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.button2_Click);
@@ -94,7 +94,7 @@
             this.btnFechar.Location = new System.Drawing.Point(624, 385);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(147, 41);
-            this.btnFechar.TabIndex = 2;
+            this.btnFechar.TabIndex = 17;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -104,7 +104,7 @@
             this.txbNome.Location = new System.Drawing.Point(184, 37);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(436, 20);
-            this.txbNome.TabIndex = 4;
+            this.txbNome.TabIndex = 1;
             // 
             // cbxSexo
             // 
@@ -115,7 +115,7 @@
             this.cbxSexo.Location = new System.Drawing.Point(184, 92);
             this.cbxSexo.Name = "cbxSexo";
             this.cbxSexo.Size = new System.Drawing.Size(132, 21);
-            this.cbxSexo.TabIndex = 10;
+            this.cbxSexo.TabIndex = 4;
             // 
             // label1
             // 
@@ -212,7 +212,7 @@
             this.txbEndereco.Location = new System.Drawing.Point(26, 214);
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(518, 20);
-            this.txbEndereco.TabIndex = 21;
+            this.txbEndereco.TabIndex = 10;
             // 
             // label11
             // 
@@ -228,7 +228,7 @@
             this.txbNacionalidade.Location = new System.Drawing.Point(26, 150);
             this.txbNacionalidade.Name = "txbNacionalidade";
             this.txbNacionalidade.Size = new System.Drawing.Size(234, 20);
-            this.txbNacionalidade.TabIndex = 23;
+            this.txbNacionalidade.TabIndex = 7;
             // 
             // txbObs
             // 
@@ -236,12 +236,12 @@
             this.txbObs.Multiline = true;
             this.txbObs.Name = "txbObs";
             this.txbObs.Size = new System.Drawing.Size(552, 62);
-            this.txbObs.TabIndex = 26;
+            this.txbObs.TabIndex = 14;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(37, 274);
+            this.label12.Location = new System.Drawing.Point(357, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 25;
@@ -258,15 +258,15 @@
             // 
             // txbContatoNome
             // 
-            this.txbContatoNome.Location = new System.Drawing.Point(253, 48);
+            this.txbContatoNome.Location = new System.Drawing.Point(14, 48);
             this.txbContatoNome.Name = "txbContatoNome";
             this.txbContatoNome.Size = new System.Drawing.Size(309, 20);
-            this.txbContatoNome.TabIndex = 30;
+            this.txbContatoNome.TabIndex = 12;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(250, 21);
+            this.label14.Location = new System.Drawing.Point(11, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 29;
@@ -287,30 +287,30 @@
             this.txbCEP.Mask = "00000-999";
             this.txbCEP.Name = "txbCEP";
             this.txbCEP.Size = new System.Drawing.Size(153, 20);
-            this.txbCEP.TabIndex = 33;
+            this.txbCEP.TabIndex = 8;
             // 
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(344, 91);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(200, 20);
-            this.txbEmail.TabIndex = 6;
+            this.txbEmail.TabIndex = 5;
             // 
             // txbTelefone
             // 
             this.txbTelefone.Location = new System.Drawing.Point(561, 214);
-            this.txbTelefone.Mask = "(99) 0 000-0000";
+            this.txbTelefone.Mask = "(99) 0 0000-0000";
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(210, 20);
-            this.txbTelefone.TabIndex = 34;
+            this.txbTelefone.TabIndex = 11;
             // 
             // txbContatoTelefone
             // 
-            this.txbContatoTelefone.Location = new System.Drawing.Point(40, 301);
-            this.txbContatoTelefone.Mask = "(99) 0 000-0000";
+            this.txbContatoTelefone.Location = new System.Drawing.Point(356, 48);
+            this.txbContatoTelefone.Mask = "(99) 0 0000-0000";
             this.txbContatoTelefone.Name = "txbContatoTelefone";
             this.txbContatoTelefone.Size = new System.Drawing.Size(210, 20);
-            this.txbContatoTelefone.TabIndex = 35;
+            this.txbContatoTelefone.TabIndex = 13;
             // 
             // txbCPF
             // 
@@ -318,7 +318,7 @@
             this.txbCPF.Mask = "000.000.000-99";
             this.txbCPF.Name = "txbCPF";
             this.txbCPF.Size = new System.Drawing.Size(132, 20);
-            this.txbCPF.TabIndex = 36;
+            this.txbCPF.TabIndex = 3;
             // 
             // txbMatricula
             // 
@@ -326,7 +326,7 @@
             this.txbMatricula.Mask = "9999";
             this.txbMatricula.Name = "txbMatricula";
             this.txbMatricula.Size = new System.Drawing.Size(132, 20);
-            this.txbMatricula.TabIndex = 37;
+            this.txbMatricula.TabIndex = 0;
             this.txbMatricula.ValidatingType = typeof(int);
             // 
             // cbxNaturalidade
@@ -335,17 +335,17 @@
             this.cbxNaturalidade.Location = new System.Drawing.Point(561, 92);
             this.cbxNaturalidade.Name = "cbxNaturalidade";
             this.cbxNaturalidade.Size = new System.Drawing.Size(210, 21);
-            this.cbxNaturalidade.TabIndex = 38;
+            this.cbxNaturalidade.TabIndex = 6;
             // 
-            // cbxCidade
+            // cbxCidadeEndereco
             // 
-            this.cbxCidade.FormattingEnabled = true;
-            this.cbxCidade.Items.AddRange(new object[] {
+            this.cbxCidadeEndereco.FormattingEnabled = true;
+            this.cbxCidadeEndereco.Items.AddRange(new object[] {
             ""});
-            this.cbxCidade.Location = new System.Drawing.Point(463, 149);
-            this.cbxCidade.Name = "cbxCidade";
-            this.cbxCidade.Size = new System.Drawing.Size(308, 21);
-            this.cbxCidade.TabIndex = 39;
+            this.cbxCidadeEndereco.Location = new System.Drawing.Point(463, 149);
+            this.cbxCidadeEndereco.Name = "cbxCidadeEndereco";
+            this.cbxCidadeEndereco.Size = new System.Drawing.Size(308, 21);
+            this.cbxCidadeEndereco.TabIndex = 9;
             // 
             // txbDataNascimento
             // 
@@ -353,13 +353,15 @@
             this.txbDataNascimento.Mask = "00/00/0000";
             this.txbDataNascimento.Name = "txbDataNascimento";
             this.txbDataNascimento.Size = new System.Drawing.Size(132, 20);
-            this.txbDataNascimento.TabIndex = 40;
+            this.txbDataNascimento.TabIndex = 2;
             this.txbDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // gbxContato
             // 
             this.gbxContato.Controls.Add(this.txbContatoNome);
             this.gbxContato.Controls.Add(this.label14);
+            this.gbxContato.Controls.Add(this.txbContatoTelefone);
+            this.gbxContato.Controls.Add(this.label12);
             this.gbxContato.Location = new System.Drawing.Point(26, 253);
             this.gbxContato.Name = "gbxContato";
             this.gbxContato.Size = new System.Drawing.Size(581, 183);
@@ -373,17 +375,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txbDataNascimento);
-            this.Controls.Add(this.cbxCidade);
+            this.Controls.Add(this.cbxCidadeEndereco);
             this.Controls.Add(this.cbxNaturalidade);
             this.Controls.Add(this.txbMatricula);
             this.Controls.Add(this.txbCPF);
-            this.Controls.Add(this.txbContatoTelefone);
             this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.txbCEP);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txbObs);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txbNacionalidade);
             this.Controls.Add(this.label10);
@@ -450,7 +450,7 @@
         private System.Windows.Forms.MaskedTextBox txbCPF;
         private System.Windows.Forms.MaskedTextBox txbMatricula;
         private System.Windows.Forms.ComboBox cbxNaturalidade;
-        private System.Windows.Forms.ComboBox cbxCidade;
+        private System.Windows.Forms.ComboBox cbxCidadeEndereco;
         private System.Windows.Forms.MaskedTextBox txbDataNascimento;
         private System.Windows.Forms.GroupBox gbxContato;
     }

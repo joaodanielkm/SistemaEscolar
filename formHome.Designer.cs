@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHome));
-            this.lblStatus = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -37,21 +36,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaDeAlunos)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(711, 428);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(77, 13);
-            this.lblStatus.TabIndex = 1;
-            this.lblStatus.Text = "Desconectado";
-            // 
             // btnCadastro
             // 
             this.btnCadastro.Location = new System.Drawing.Point(649, 12);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(139, 40);
-            this.btnCadastro.TabIndex = 2;
+            this.btnCadastro.TabIndex = 1;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.UseVisualStyleBackColor = true;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
@@ -61,7 +51,7 @@
             this.btnEditar.Location = new System.Drawing.Point(649, 58);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(139, 40);
-            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -71,7 +61,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(649, 104);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(139, 40);
-            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -80,12 +70,17 @@
             // 
             this.dtgListaDeAlunos.AllowUserToAddRows = false;
             this.dtgListaDeAlunos.AllowUserToDeleteRows = false;
+            this.dtgListaDeAlunos.AllowUserToResizeColumns = false;
+            this.dtgListaDeAlunos.AllowUserToResizeRows = false;
+            this.dtgListaDeAlunos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgListaDeAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListaDeAlunos.Location = new System.Drawing.Point(13, 13);
+            this.dtgListaDeAlunos.MultiSelect = false;
             this.dtgListaDeAlunos.Name = "dtgListaDeAlunos";
             this.dtgListaDeAlunos.ReadOnly = true;
+            this.dtgListaDeAlunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgListaDeAlunos.Size = new System.Drawing.Size(630, 388);
-            this.dtgListaDeAlunos.TabIndex = 5;
+            this.dtgListaDeAlunos.TabIndex = 0;
             // 
             // formHome
             // 
@@ -96,7 +91,6 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.lblStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -106,16 +100,14 @@
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaDeAlunos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.DataGridView dtgListaDeAlunos;
+        public System.Windows.Forms.DataGridView dtgListaDeAlunos;
     }
 }
 
