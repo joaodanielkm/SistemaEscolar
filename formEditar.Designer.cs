@@ -109,6 +109,7 @@ namespace Sistema_Escolar
             // 
             // cbxSexo
             // 
+            this.cbxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.Items.AddRange(new object[] {
             "Masculino",
@@ -334,18 +335,26 @@ namespace Sistema_Escolar
             // 
             // cbxNaturalidade
             // 
+            this.cbxNaturalidade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbxNaturalidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxNaturalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNaturalidade.FormattingEnabled = true;
             this.cbxNaturalidade.Location = new System.Drawing.Point(575, 92);
             this.cbxNaturalidade.Name = "cbxNaturalidade";
             this.cbxNaturalidade.Size = new System.Drawing.Size(196, 21);
+            this.cbxNaturalidade.Sorted = true;
             this.cbxNaturalidade.TabIndex = 5;
             // 
             // cbxCidadeEndereco
             // 
+            this.cbxCidadeEndereco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbxCidadeEndereco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxCidadeEndereco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCidadeEndereco.FormattingEnabled = true;
             this.cbxCidadeEndereco.Location = new System.Drawing.Point(463, 150);
             this.cbxCidadeEndereco.Name = "cbxCidadeEndereco";
             this.cbxCidadeEndereco.Size = new System.Drawing.Size(308, 21);
+            this.cbxCidadeEndereco.Sorted = true;
             this.cbxCidadeEndereco.TabIndex = 8;
             // 
             // txbDataNascimento
