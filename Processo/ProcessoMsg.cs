@@ -54,5 +54,10 @@ namespace Sistema_Escolar.Processo
             var obrigatorios = MessageBox.Show("Favor Preencher os campos obrigatorios!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return obrigatorios;
         }
+        public DialogResult DesejaFechar()
+        {
+            var desejaFechar = MessageBox.Show("Deseja mesmo fechar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            return desejaFechar;
+        }
     }
 }

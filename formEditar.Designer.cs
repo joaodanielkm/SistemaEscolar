@@ -505,6 +505,7 @@ namespace Sistema_Escolar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label24);
@@ -550,6 +551,7 @@ namespace Sistema_Escolar
             this.Name = "formEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formEditar_FormClosed);
             this.Load += new System.EventHandler(this.formEditar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

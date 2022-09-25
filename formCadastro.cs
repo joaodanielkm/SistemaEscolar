@@ -103,5 +103,10 @@ namespace Sistema_Escolar
             Aluno aluno = new Aluno();
             txbNome.Text = aluno.Nome;
         }
+
+        private void formCadastro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            home.Show();
+        }
     }
 }

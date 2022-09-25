@@ -424,5 +424,22 @@ namespace Sistema_Escolar
             dtgListaDeAlunos.Columns[13].Visible = false;
             dtgListaDeAlunos.Columns[14].Visible = false;
         }
+
+        private void formHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ProcessoMsg processoMsg = new ProcessoMsg();
+            formHome home = new formHome();
+            var decisao = msg.DesejaFechar();
+
+            if (decisao == DialogResult.Yes)
+            {
+                home.Close();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+            
+        }
     }
 }

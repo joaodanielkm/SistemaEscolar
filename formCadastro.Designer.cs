@@ -527,6 +527,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label25);
@@ -575,6 +576,7 @@
             this.Name = "formCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formCadastro_FormClosed);
             this.Load += new System.EventHandler(this.formCadastro_Load);
             this.gbxContato.ResumeLayout(false);
             this.gbxContato.PerformLayout();

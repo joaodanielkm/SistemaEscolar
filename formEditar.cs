@@ -123,5 +123,10 @@ namespace Sistema_Escolar
         {
            txbNome.Focus();
         }
+
+        private void formEditar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            home.Show();
+        }
     }
 }

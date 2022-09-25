@@ -112,6 +112,7 @@
             this.Name = "formHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Escolar";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formHome_FormClosing);
             this.Load += new System.EventHandler(this.Home_Load);
             this.VisibleChanged += new System.EventHandler(this.formHome_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaDeAlunos)).EndInit();
