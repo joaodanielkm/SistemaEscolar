@@ -108,8 +108,8 @@ namespace Sistema_Escolar.Mapeador
                     cmd.Parameters["@CPF"].Value = aluno.CPF;
                     cmd.Parameters["@Sexo"].Value = aluno.Sexo;
                     cmd.Parameters["@nascimento"].Value = aluno.Nascimento;
-                    cmd.Parameters["@nacionalidade"].Value = aluno.Nacionalidade;
                     cmd.Parameters["@naturalidade"].Value = aluno.Naturalidade;
+                    cmd.Parameters["@nacionalidade"].Value = aluno.Nacionalidade;
                     cmd.Parameters["@endereco"].Value = aluno.Endereco;
                     cmd.Parameters["@cidadeEndereco"].Value = aluno.CidadeEndereco;
                     cmd.Parameters["@CEP"].Value = aluno.CEP;
@@ -141,7 +141,7 @@ namespace Sistema_Escolar.Mapeador
         {
             List<Aluno> alunos = new List<Aluno>();
 
-            string sql = @"SELECT A.ALUMATRICULA AS ALUMATRICULA ,A.ALUNOME AS ALUNOME ,	A.ALUCPF AS ALUCPF ,A.ALUENDERECO AS ALUENDERECO ,A.ALUEMAIL AS ALUEMAIL ,
+            string sql = @"SELECT A.ALUMATRICULA AS ALUMATRICULA ,A.ALUNOME AS ALUNOME , A.ALUCPF AS ALUCPF ,A.ALUENDERECO AS ALUENDERECO ,A.ALUEMAIL AS ALUEMAIL ,
 A.ALUSEXO AS ALUSEXO ,A.ALUNACIONAL AS ALUNACIONAL ,A.ALUNATURAL AS ALUNATURAL ,A.ALUDATANASC AS ALUDATANASC ,A.ALUTELEFONE AS ALUTELEFONE ,
 A.ALUCEP AS ALUCEP ,A.ALUFONECONTATO AS ALUFONECONTATO ,A.ALUCONTATO AS ALUCONTATO ,A.ALUOBS AS ALUOBS ,A.ALUENDCIDADE AS ALUENDCIDADE,
 C.DESCRICAOCIDADE AS CIDADENATU,CC.DESCRICAOCIDADE AS CIDADEEND

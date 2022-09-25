@@ -33,6 +33,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.dtgListaDeAlunos = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaDeAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,21 +73,35 @@
             this.dtgListaDeAlunos.AllowUserToDeleteRows = false;
             this.dtgListaDeAlunos.AllowUserToResizeColumns = false;
             this.dtgListaDeAlunos.AllowUserToResizeRows = false;
-            this.dtgListaDeAlunos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgListaDeAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaDeAlunos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgListaDeAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgListaDeAlunos.EnableHeadersVisualStyles = false;
             this.dtgListaDeAlunos.Location = new System.Drawing.Point(13, 13);
             this.dtgListaDeAlunos.MultiSelect = false;
             this.dtgListaDeAlunos.Name = "dtgListaDeAlunos";
             this.dtgListaDeAlunos.ReadOnly = true;
+            this.dtgListaDeAlunos.RowHeadersVisible = false;
             this.dtgListaDeAlunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgListaDeAlunos.Size = new System.Drawing.Size(630, 388);
             this.dtgListaDeAlunos.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Chartreuse;
+            this.button1.Location = new System.Drawing.Point(649, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 85);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Atualizar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtgListaDeAlunos);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -98,6 +113,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Escolar";
             this.Load += new System.EventHandler(this.Home_Load);
+            this.VisibleChanged += new System.EventHandler(this.formHome_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaDeAlunos)).EndInit();
             this.ResumeLayout(false);
 
@@ -108,6 +124,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         public System.Windows.Forms.DataGridView dtgListaDeAlunos;
+        private System.Windows.Forms.Button button1;
     }
 }
 

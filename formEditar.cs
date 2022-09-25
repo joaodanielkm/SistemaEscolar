@@ -20,6 +20,8 @@ namespace Sistema_Escolar
     public partial class formEditar : Form
     {
         public string NomeEditar { get; set; }
+        public formHome home { get; set; }
+
 
         MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
         ProcessoAluno processoAluno = new ProcessoAluno();
@@ -79,9 +81,9 @@ namespace Sistema_Escolar
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            formHome home = new formHome();
+            //formHome home = new formHome();
             this.Close();
-            home.ShowDialog();
+            home.Show();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -95,7 +97,7 @@ namespace Sistema_Escolar
                 CPF = txbCPF.Text,
                 Sexo = cbxSexo.Text,
                 Nascimento = txbDataNascimento.Text,
-                Nacionalidade = cbxCidadeEndereco.Text.ToUpper(),
+                Nacionalidade = txbNacionalidade.Text.ToUpper(),
                 Naturalidade = cbxNaturalidade.Text.ToUpper(),
                 Endereco = txbEndereco.Text.ToUpper(),
                 CidadeEndereco = cbxCidadeEndereco.Text.ToUpper(),
@@ -109,7 +111,10 @@ namespace Sistema_Escolar
             if (processoAluno.EhValidoCampos(aluno))
             {
                 processoAluno.AlteraAluno(aluno);
-                
+                //formHome home = new formHome();
+                this.Close();
+                home.Show();
+
             }
             
         }

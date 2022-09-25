@@ -15,7 +15,7 @@ namespace Sistema_Escolar
 {
     public partial class formCadastro : Form
     {
-
+        public formHome home { get; set; }
         ProcessoAluno processoAluno = new ProcessoAluno();
         MapeadorDeAluno mapeadorDeAluno = new MapeadorDeAluno();
 
@@ -49,9 +49,9 @@ namespace Sistema_Escolar
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            formHome home = new formHome();
+            //formHome home = new formHome();
             this.Close();
-            home.ShowDialog();
+            home.Show();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Sistema_Escolar
                 CPF = txbCPF.Text,
                 Sexo = cbxSexo.Text,
                 Nascimento = txbDataNascimento.Text,
-                Nacionalidade = cbxCidadeEndereco.Text.ToUpper(),
+                Nacionalidade = txbNacionalidade.Text.ToUpper(),
                 Naturalidade = cbxNaturalidade.Text.ToUpper(),
                 Endereco = txbEndereco.Text.ToUpper(),
                 CidadeEndereco = cbxCidadeEndereco.Text.ToUpper(),
@@ -79,6 +79,8 @@ namespace Sistema_Escolar
             if (processoAluno.EhValidoCampos(aluno))
             {
                 processoAluno.CadastraAluno(aluno);
+                this.Close();
+                home.Show();
             }
             
 
