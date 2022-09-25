@@ -61,6 +61,8 @@ C:\Users\Suporte\Source\Repos\SistemaEscolar\bin\Debug\System.Runtime.CompilerSe
 C:\Users\Suporte\Source\Repos\SistemaEscolar\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Suporte\Source\Repos\SistemaEscolar\obj\Debug\Sistema Escolar.csproj.CopyComplete
 C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.exe.config
+C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.exe.manifest
+C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.application
 C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.exe
 C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.pdb
 C:\Users\User\Projetos\Sistema Escolar\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
@@ -119,10 +121,8 @@ C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema_Escolar.formHome.resour
 C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema_Escolar.Properties.Resources.resources
 C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.GenerateResource.cache
 C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.CoreCompileInputs.cache
+C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.exe.manifest
+C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.application
 C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.CopyComplete
 C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.exe
 C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.pdb
-C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.exe.manifest
-C:\Users\User\Projetos\Sistema Escolar\bin\Debug\Sistema Escolar.application
-C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.exe.manifest
-C:\Users\User\Projetos\Sistema Escolar\obj\Debug\Sistema Escolar.application
